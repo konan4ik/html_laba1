@@ -1,185 +1,181 @@
 <!DOCTYPE html>
 <html lang="ru">
-    <head>
-        <meta charset="UTF-8">
-        <title>Лаба 1 мост Хусутун</title>
-    </head>
-    
-    <body>
-        <p> 
-            &nbsp;&nbsp;&nbsp;&nbsp;<a href="main.html">Самые длинные мосты <br></a> 
-            &nbsp;&nbsp;&nbsp;&nbsp;<a href="table.html"><font size="2">Список самых длинных мостов</font></a>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Лаба 1 мост Хусутун</title>
+</head>
+
+<body>
+    <p>
+        <a href="main.html">Самые длинные мосты <br></a>
+        <a href="table.html">
+            <font size="2">Список самых длинных мостов</font>
+        </a>
+    </p>
+    <hr width="99%">
+
+    <details open>
+        <summary>График</summary>
+
+        <p>
+            <b>Значения по оси Ox</b>
         </p>
-        <hr width="99%">
 
-        <details open>
-            <summary>График</summary>
+        <form>
+            <label>
+                <input type="radio" name="ox" value="type" id="ox_type"> Тип
+            </label><br>
 
-            <p>
-                <b>Значения по оси Ox</b>
-            </p>
+            <label>
+                <input type="radio" name="ox" value="country" id="ox_country"> Страна
+            </label><br>
 
-            <form>
-                <label>
-                    <input type="radio" name="ox" value="Тип"> Тип
-                </label><br>
-
-                <label>
-                    <input type="radio" name="ox" value="Страна"> Страна
-                </label><br>
-
-                <label>
-                    <input type="radio" name="ox" value="Год"> Год
-                </label>
-
-                <p>
-                    <b>Значения по оси Oy</b>
-                </p>
-
-                <label>
-                    <input type="checkbox" name="oy" value="Максимальная длина"> Максимальная длина
-                </label><br>
-
-                <label>
-                    <input type="checkbox" name="oy" value="Минимальная длина"> Минимальная длина
-                </label><br>
-
-                <label>
-                    <input type="checkbox" name="oy" value="Количество сооружений"> Количество сооружений
-                </label>
-
-                <p>
-                    <button type="submit">Построить</button>
-                </p>
-            </form>
+            <label>
+                <input type="radio" name="ox" value="year" id="ox_year"> Год
+            </label>
 
             <p>
-                Здесь будет график
+                <b>Значения по оси Oy</b>
             </p>
 
-        </details>
+            <label>
+                <input type="checkbox" name="oy" value="max_length" id="oy_max_length"> Максимальная длина
+            </label><br>
 
-        <details open>
-            <summary>Фильтр</summary>
+            <label>
+                <input type="checkbox" name="oy" value="min_length" id="oy_min_length"> Минимальная длина
+            </label><br>
 
-            <form>
-                <p>
-                    <label>
-                        Название: <input type="text" name="name">
-                    </label><br>
-                </p>
+            <label>
+                <input type="checkbox" name="oy" value="avg_length" id="oy_avg_length"> Средняя длина
+            </label>
 
-                <p>            
-                    <label>
-                        Тип: <input type="text" name="type">
-                    </label><br>
-                </p>
+            <p>
+                <button type="button">Построить</button>
+            </p>
+        </form>
 
-                <p>            
-                    <label>
-                        Город: <input type="text" name="city">
-                    </label>
-                </p>
+        <p>
+            Здесь будет график
+        </p>
 
-                <p>
-                    <label>
-                        Год: от <input type="text" name="year_from">
-                    </label>
-                    <label>
-                        до <input type="text" name="year_to">
-                    </label>
-                </p>
+    </details>
 
-                <p>            
-                    <label>
-                        Длина: от <input type="text" name="length_from">
-                    </label>
-                    <label>
-                        до <input type="text" name="length_to">
-                    </label>
-                </p>
+    <details open>
+        <summary>Фильтр</summary>
 
-                <p>
-                    <button type="submit">Найти</button>
-                </p>
-            </form> 
+        <form>
+            <p>
+                <label>
+                    Название: <input type="text" name="name" id="filter_name">
+                </label>
+            </p>
 
-        </details>
-        
-        <details open>
-            <summary>Сортировка</summary>
+            <p>
+                <label>
+                    Тип: <input type="text" name="type" id="filter_type">
+                </label>
+            </p>
 
-            <form>
-                <p>            
-                    <label>
-                        Первый уровень: 
-                        <select name="sort1">
-                            <option value="Нет">Нет</option>
-                            <option value="Название">Название</option>
-                            <option value="Тип">Тип</option>
-                            <option value="Страна">Страна</option>
-                            <option value="Город">Город</option>
-                            <option value="Год">Год</option>
-                            <option value="Длина">Длина</option>
-                        </select>
-                    </label>
-                    <label>
-                        По убыванию? <input type="checkbox" name="1st_desc">
-                    </label>
-                </p>
+            <p>
+                <label>
+                    Город: <input type="text" name="city" id="filter_city">
+                </label>
+            </p>
 
-                <p>            
-                    <label>
-                        Второй уровень: 
-                        <select name="sort2">
-                            <option value="Нет">Нет</option>
-                            <option value="Название">Название</option>
-                            <option value="Тип">Тип</option>
-                            <option value="Страна">Страна</option>
-                            <option value="Город">Город</option>
-                            <option value="Год">Год</option>
-                            <option value="Длина">Длина</option>
-                        </select>
-                    </label>
-                    <label>
-                        По убыванию? <input type="checkbox" name="2nd_desc">
-                    </label>
-                </p>
+            <p>
+                <label>
+                    Год: от <input type="number" name="year_from" id="filter_year_from">
+                </label>
+                <label>
+                    до <input type="number" name="year_to" id="filter_year_to">
+                </label>
+            </p>
 
-                <p>            
-                    <label>
-                        Третий уровень: 
-                        <select name="sort3">
-                            <option value="Нет">Нет</option>
-                            <option value="Название">Название</option>
-                            <option value="Тип">Тип</option>
-                            <option value="Страна">Страна</option>
-                            <option value="Город">Город</option>
-                            <option value="Год">Год</option>
-                            <option value="Длина">Длина</option>
-                        </select>
-                    </label>
-                    <label>
-                        По убыванию? <input type="checkbox" name="3rd_desc">
-                    </label>
-                </p>
+            <p>
+                <label>
+                    Длина: от <input type="number" name="length_from" id="filter_length_from">
+                </label>
+                <label>
+                    до <input type="number" name="length_to" id="filter_legth_to">
+                </label>
+            </p>
 
-                <p>
-                    <button type="submit">Сортировать</button>
-                </p>
-            </form> 
+            <p>
+                <button type="button">Найти</button>
+            </p>
+        </form>
 
-        </details>
+    </details>
 
-        <p>Типы мостов:</p>
-        <ul>
-            <li>Вантовый</li>
-            <li>Балочный</li>
-            <li>Арочный</li>
-            <li>Подвесной</li>
-        </ul>
+    <details open>
+        <summary>Сортировка</summary>
 
-        <table border="1" cellspacing="0" cellpadding="2">
+        <form>
+            <p>
+                <label>
+                    Первый уровень:
+                    <select name="sort1" id="sort1">
+                        <option value="">Нет</option>
+                        <option value="name">Название</option>
+                        <option value="type">Тип</option>
+                        <option value="country">Страна</option>
+                        <option value="city">Город</option>
+                        <option value="year">Год</option>
+                        <option value="length">Длина</option>
+                    </select>
+                </label>
+                <label>
+                    По убыванию? <input type="checkbox" name="1st_desc" id="1st_desc">
+                </label>
+            </p>
+
+            <p>
+                <label>
+                    Второй уровень:
+                    <select name="sort2" id="sort2">
+                        <option value="">Нет</option>
+                        <option value="name">Название</option>
+                        <option value="type">Тип</option>
+                        <option value="country">Страна</option>
+                        <option value="city">Город</option>
+                        <option value="year">Год</option>
+                        <option value="length">Длина</option>
+                    </select>
+                </label>
+                <label>
+                    По убыванию? <input type="checkbox" name="2nd_desc" id="2nd_desc">
+                </label>
+            </p>
+
+            <p>
+                <label>
+                    Третий уровень:
+                    <select name="sort3" id="sort3">
+                        <option value="">Нет</option>
+                        <option value="name">Название</option>
+                        <option value="type">Тип</option>
+                        <option value="country">Страна</option>
+                        <option value="city">Город</option>
+                        <option value="year">Год</option>
+                        <option value="length">Длина</option>
+                    </select>
+                </label>
+                <label>
+                    По убыванию? <input type="checkbox" name="3rd_desc" id="3rd_desc">
+                </label>
+            </p>
+
+            <p>
+                <button type="button">Сортировать</button>
+            </p>
+        </form>
+
+    </details>
+
+    <table border="1" cellspacing="0" cellpadding="2">
+        <thead>
             <tr>
                 <th>Название</th>
                 <th>Тип</th>
@@ -188,58 +184,419 @@
                 <th>Год</th>
                 <th>Длина, м</th>
             </tr>
-            <tr><td>Русский мост</td><td>Вантовый</td><td>Россия</td><td>Владивосток</td><td>2012</td><td>1885</td></tr>
-            <tr><td>Золотой мост</td><td>Вантовый</td><td>Россия</td><td>Владивосток</td><td>2012</td><td>1388</td></tr>
-            <tr><td>Крымский мост</td><td>Балочный</td><td>Россия</td><td>Керчь</td><td>2018</td><td>19000</td></tr>
-            <tr><td>Большой Обуховский мост</td><td>Вантовый</td><td>Россия</td><td>Санкт-Петербург</td><td>2004</td><td>2884</td></tr>
-            <tr><td>Мост Миллениум</td><td>Вантовый</td><td>Россия</td><td>Казань</td><td>2005</td><td>835</td></tr>
-            <tr><td>Сиднейский мост Харбор-Бридж</td><td>Арочный</td><td>Австралия</td><td>Сидней</td><td>1932</td><td>1149</td></tr>
-            <tr><td>Мост Золотые Ворота</td><td>Подвесной</td><td>США</td><td>Сан-Франциско</td><td>1937</td><td>2737</td></tr>
-            <tr><td>Бруклинский мост</td><td>Подвесной</td><td>США</td><td>Нью-Йорк</td><td>1883</td><td>1825</td></tr>
-            <tr><td>Мост Джорджа Вашингтона</td><td>Подвесной</td><td>США</td><td>Нью-Йорк</td><td>1931</td><td>1451</td></tr>
-            <tr><td>Мост Веррацано-Нарроуз</td><td>Подвесной</td><td>США</td><td>Нью-Йорк</td><td>1964</td><td>1298</td></tr>
-            <tr><td>Мост Акаси-Кайкё</td><td>Подвесной</td><td>Япония</td><td>Кобе — Авадзи</td><td>1998</td><td>3911</td></tr>
-            <tr><td>Мост Сэто-Охаси</td><td>Подвесной</td><td>Япония</td><td>Курасики — Сакаиде</td><td>1988</td><td>9368</td></tr>
-            <tr><td>Мост Татара</td><td>Вантовый</td><td>Япония</td><td>Имабари</td><td>1999</td><td>1480</td></tr>
-            <tr><td>Мост Рёгоку</td><td>Балочный</td><td>Япония</td><td>Токио</td><td>1932</td><td>164</td></tr>
-            <tr><td>Мост Сутун</td><td>Вантовый</td><td>Китай</td><td>Сучжоу — Наньтун</td><td>2008</td><td>8206</td></tr>
-            <tr><td>Мост Хусутун</td><td>Вантовый</td><td>Китай</td><td>Наньтун</td><td>2020</td><td>11072</td></tr>
-            <tr><td>Мост Дунхай</td><td>Балочный</td><td>Китай</td><td>Шанхай</td><td>2005</td><td>32000</td></tr>
-            <tr><td>Мост Циндао-Хайвань</td><td>Балочный</td><td>Китай</td><td>Циндао</td><td>2011</td><td>42000</td></tr>
-            <tr><td>Мост Янцунь</td><td>Балочный</td><td>Китай</td><td>Тяньцзинь</td><td>2008</td><td>35900</td></tr>
-            <tr><td>Мост Чжуси</td><td>Вантовый</td><td>Китай</td><td>Шанхай</td><td>2009</td><td>2580</td></tr>
-            <tr><td>Мост Ханчжоу-Бэй</td><td>Вантовый</td><td>Китай</td><td>Цзясин — Нинбо</td><td>2008</td><td>35673</td></tr>
-            <tr><td>Мост через реку Сидухэ</td><td>Подвесной</td><td>Китай</td><td>Эньши</td><td>2009</td><td>1222</td></tr>
-            <tr><td>Мост Лупу</td><td>Арочный</td><td>Китай</td><td>Шанхай</td><td>2003</td><td>3900</td></tr>
-            <tr><td>Мост Нанкин через Янцзы</td><td>Вантовый</td><td>Китай</td><td>Нанкин</td><td>1968</td><td>6772</td></tr>
-            <tr><td>Мост Вухань через Янцзы</td><td>Подвесной</td><td>Китай</td><td>Ухань</td><td>1995</td><td>1670</td></tr>
-            <tr><td>Мост Босфор</td><td>Подвесной</td><td>Турция</td><td>Стамбул</td><td>1973</td><td>1560</td></tr>
-            <tr><td>Мост Фатиха Султана Мехмеда</td><td>Подвесной</td><td>Турция</td><td>Стамбул</td><td>1988</td><td>1510</td></tr>
-            <tr><td>Мост Явуз Султан Селим</td><td>Подвесной</td><td>Турция</td><td>Стамбул</td><td>2016</td><td>2164</td></tr>
-            <tr><td>Мост Османа Гази</td><td>Подвесной</td><td>Турция</td><td>Гебзе — Ялова</td><td>2016</td><td>2682</td></tr>
-            <tr><td>Мост Рио-Антирио</td><td>Вантовый</td><td>Греция</td><td>Патры — Антирио</td><td>2004</td><td>2880</td></tr>
-            <tr><td>Виадук Мийо</td><td>Вантовый</td><td>Франция</td><td>Мийо</td><td>2004</td><td>2460</td></tr>
-            <tr><td>Мост Нормандия</td><td>Вантовый</td><td>Франция</td><td>Гавр — Онфлёр</td><td>1995</td><td>2141</td></tr>
-            <tr><td>Мост Эресунн</td><td>Вантовый</td><td>Дания — Швеция</td><td>Копенгаген — Мальмё</td><td>2000</td><td>7845</td></tr>
-            <tr><td>Мост Большой Бельт</td><td>Подвесной</td><td>Дания</td><td>Корсёр — Нюборг</td><td>1998</td><td>6790</td></tr>
-            <tr><td>Мост Форт-Бридж</td><td>Балочный</td><td>Великобритания</td><td>Эдинбург</td><td>1890</td><td>2528</td></tr>
-            <tr><td>Мост Миллениум</td><td>Балочный</td><td>Великобритания</td><td>Лондон</td><td>2000</td><td>325</td></tr>
-            <tr><td>Тауэрский мост</td><td>Разводной</td><td>Великобритания</td><td>Лондон</td><td>1894</td><td>244</td></tr>
-            <tr><td>Мост Ватерлоо</td><td>Балочный</td><td>Великобритания</td><td>Лондон</td><td>1945</td><td>381</td></tr>
-            <tr><td>Мост Александра III</td><td>Арочный</td><td>Франция</td><td>Париж</td><td>1900</td><td>160</td></tr>
-            <tr><td>Мост Пон-Нёф</td><td>Арочный</td><td>Франция</td><td>Париж</td><td>1607</td><td>232</td></tr>
-            <tr><td>Мост Карла</td><td>Арочный</td><td>Чехия</td><td>Прага</td><td>1402</td><td>516</td></tr>
-            <tr><td>Цепной мост Сечени</td><td>Подвесной</td><td>Венгрия</td><td>Будапешт</td><td>1849</td><td>375</td></tr>
-            <tr><td>Мост Васко да Гама</td><td>Вантовый</td><td>Португалия</td><td>Лиссабон</td><td>1998</td><td>17000</td></tr>
-            <tr><td>Мост 25 апреля</td><td>Подвесной</td><td>Португалия</td><td>Лиссабон</td><td>1966</td><td>2277</td></tr>
-            <tr><td>Мост Инчхон</td><td>Вантовый</td><td>Южная Корея</td><td>Инчхон</td><td>2009</td><td>21200</td></tr>
-            <tr><td>Мост Банпо</td><td>Арочный</td><td>Южная Корея</td><td>Сеул</td><td>1982</td><td>1490</td></tr>
-            <tr><td>Мост Ханган</td><td>Балочный</td><td>Южная Корея</td><td>Сеул</td><td>1937</td><td>1225</td></tr>
-            <tr><td>Мост Махараджа</td><td>Арочный</td><td>Индия</td><td>Колката</td><td>1943</td><td>705</td></tr>
-            <tr><td>Мост Бандра — Ворли</td><td>Вантовый</td><td>Индия</td><td>Мумбаи</td><td>2009</td><td>5600</td></tr>
-            <tr><td>Мост Кинг-Фахд</td><td>Балочный</td><td>Саудовская Аравия — Бахрейн</td><td>Эль-Хубар — Манама</td><td>1986</td><td>25000</td></tr>
-            <tr><td>Мост через залив Сидней-Харбор</td><td>Арочный</td><td>Австралия</td><td>Сидней</td><td>1932</td><td>1149</td></tr>
-        </table>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Русский мост</td>
+                <td>Вантовый</td>
+                <td>Россия</td>
+                <td>Владивосток</td>
+                <td>2012</td>
+                <td>1885</td>
+            </tr>
+            <tr>
+                <td>Золотой мост</td>
+                <td>Вантовый</td>
+                <td>Россия</td>
+                <td>Владивосток</td>
+                <td>2012</td>
+                <td>1388</td>
+            </tr>
+            <tr>
+                <td>Крымский мост</td>
+                <td>Балочный</td>
+                <td>Россия</td>
+                <td>Керчь</td>
+                <td>2018</td>
+                <td>19000</td>
+            </tr>
+            <tr>
+                <td>Большой Обуховский мост</td>
+                <td>Вантовый</td>
+                <td>Россия</td>
+                <td>Санкт-Петербург</td>
+                <td>2004</td>
+                <td>2884</td>
+            </tr>
+            <tr>
+                <td>Мост Миллениум</td>
+                <td>Вантовый</td>
+                <td>Россия</td>
+                <td>Казань</td>
+                <td>2005</td>
+                <td>835</td>
+            </tr>
+            <tr>
+                <td>Сиднейский мост Харбор-Бридж</td>
+                <td>Арочный</td>
+                <td>Австралия</td>
+                <td>Сидней</td>
+                <td>1932</td>
+                <td>1149</td>
+            </tr>
+            <tr>
+                <td>Мост Золотые Ворота</td>
+                <td>Подвесной</td>
+                <td>США</td>
+                <td>Сан-Франциско</td>
+                <td>1937</td>
+                <td>2737</td>
+            </tr>
+            <tr>
+                <td>Бруклинский мост</td>
+                <td>Подвесной</td>
+                <td>США</td>
+                <td>Нью-Йорк</td>
+                <td>1883</td>
+                <td>1825</td>
+            </tr>
+            <tr>
+                <td>Мост Джорджа Вашингтона</td>
+                <td>Подвесной</td>
+                <td>США</td>
+                <td>Нью-Йорк</td>
+                <td>1931</td>
+                <td>1451</td>
+            </tr>
+            <tr>
+                <td>Мост Веррацано-Нарроуз</td>
+                <td>Подвесной</td>
+                <td>США</td>
+                <td>Нью-Йорк</td>
+                <td>1964</td>
+                <td>1298</td>
+            </tr>
+            <tr>
+                <td>Мост Акаси-Кайкё</td>
+                <td>Подвесной</td>
+                <td>Япония</td>
+                <td>Кобе — Авадзи</td>
+                <td>1998</td>
+                <td>3911</td>
+            </tr>
+            <tr>
+                <td>Мост Сэто-Охаси</td>
+                <td>Подвесной</td>
+                <td>Япония</td>
+                <td>Курасики — Сакаиде</td>
+                <td>1988</td>
+                <td>9368</td>
+            </tr>
+            <tr>
+                <td>Мост Татара</td>
+                <td>Вантовый</td>
+                <td>Япония</td>
+                <td>Имабари</td>
+                <td>1999</td>
+                <td>1480</td>
+            </tr>
+            <tr>
+                <td>Мост Рёгоку</td>
+                <td>Балочный</td>
+                <td>Япония</td>
+                <td>Токио</td>
+                <td>1932</td>
+                <td>164</td>
+            </tr>
+            <tr>
+                <td>Мост Сутун</td>
+                <td>Вантовый</td>
+                <td>Китай</td>
+                <td>Сучжоу — Наньтун</td>
+                <td>2008</td>
+                <td>8206</td>
+            </tr>
+            <tr>
+                <td>Мост Хусутун</td>
+                <td>Вантовый</td>
+                <td>Китай</td>
+                <td>Наньтун</td>
+                <td>2020</td>
+                <td>11072</td>
+            </tr>
+            <tr>
+                <td>Мост Дунхай</td>
+                <td>Балочный</td>
+                <td>Китай</td>
+                <td>Шанхай</td>
+                <td>2005</td>
+                <td>32000</td>
+            </tr>
+            <tr>
+                <td>Мост Циндао-Хайвань</td>
+                <td>Балочный</td>
+                <td>Китай</td>
+                <td>Циндао</td>
+                <td>2011</td>
+                <td>42000</td>
+            </tr>
+            <tr>
+                <td>Мост Янцунь</td>
+                <td>Балочный</td>
+                <td>Китай</td>
+                <td>Тяньцзинь</td>
+                <td>2008</td>
+                <td>35900</td>
+            </tr>
+            <tr>
+                <td>Мост Чжуси</td>
+                <td>Вантовый</td>
+                <td>Китай</td>
+                <td>Шанхай</td>
+                <td>2009</td>
+                <td>2580</td>
+            </tr>
+            <tr>
+                <td>Мост Ханчжоу-Бэй</td>
+                <td>Вантовый</td>
+                <td>Китай</td>
+                <td>Цзясин — Нинбо</td>
+                <td>2008</td>
+                <td>35673</td>
+            </tr>
+            <tr>
+                <td>Мост через реку Сидухэ</td>
+                <td>Подвесной</td>
+                <td>Китай</td>
+                <td>Эньши</td>
+                <td>2009</td>
+                <td>1222</td>
+            </tr>
+            <tr>
+                <td>Мост Лупу</td>
+                <td>Арочный</td>
+                <td>Китай</td>
+                <td>Шанхай</td>
+                <td>2003</td>
+                <td>3900</td>
+            </tr>
+            <tr>
+                <td>Мост Нанкин через Янцзы</td>
+                <td>Вантовый</td>
+                <td>Китай</td>
+                <td>Нанкин</td>
+                <td>1968</td>
+                <td>6772</td>
+            </tr>
+            <tr>
+                <td>Мост Вухань через Янцзы</td>
+                <td>Подвесной</td>
+                <td>Китай</td>
+                <td>Ухань</td>
+                <td>1995</td>
+                <td>1670</td>
+            </tr>
+            <tr>
+                <td>Мост Босфор</td>
+                <td>Подвесной</td>
+                <td>Турция</td>
+                <td>Стамбул</td>
+                <td>1973</td>
+                <td>1560</td>
+            </tr>
+            <tr>
+                <td>Мост Фатиха Султана Мехмеда</td>
+                <td>Подвесной</td>
+                <td>Турция</td>
+                <td>Стамбул</td>
+                <td>1988</td>
+                <td>1510</td>
+            </tr>
+            <tr>
+                <td>Мост Явуз Султан Селим</td>
+                <td>Подвесной</td>
+                <td>Турция</td>
+                <td>Стамбул</td>
+                <td>2016</td>
+                <td>2164</td>
+            </tr>
+            <tr>
+                <td>Мост Османа Гази</td>
+                <td>Подвесной</td>
+                <td>Турция</td>
+                <td>Гебзе — Ялова</td>
+                <td>2016</td>
+                <td>2682</td>
+            </tr>
+            <tr>
+                <td>Мост Рио-Антирио</td>
+                <td>Вантовый</td>
+                <td>Греция</td>
+                <td>Патры — Антирио</td>
+                <td>2004</td>
+                <td>2880</td>
+            </tr>
+            <tr>
+                <td>Виадук Мийо</td>
+                <td>Вантовый</td>
+                <td>Франция</td>
+                <td>Мийо</td>
+                <td>2004</td>
+                <td>2460</td>
+            </tr>
+            <tr>
+                <td>Мост Нормандия</td>
+                <td>Вантовый</td>
+                <td>Франция</td>
+                <td>Гавр — Онфлёр</td>
+                <td>1995</td>
+                <td>2141</td>
+            </tr>
+            <tr>
+                <td>Мост Эресунн</td>
+                <td>Вантовый</td>
+                <td>Дания — Швеция</td>
+                <td>Копенгаген — Мальмё</td>
+                <td>2000</td>
+                <td>7845</td>
+            </tr>
+            <tr>
+                <td>Мост Большой Бельт</td>
+                <td>Подвесной</td>
+                <td>Дания</td>
+                <td>Корсёр — Нюборг</td>
+                <td>1998</td>
+                <td>6790</td>
+            </tr>
+            <tr>
+                <td>Мост Форт-Бридж</td>
+                <td>Балочный</td>
+                <td>Великобритания</td>
+                <td>Эдинбург</td>
+                <td>1890</td>
+                <td>2528</td>
+            </tr>
+            <tr>
+                <td>Мост Миллениум</td>
+                <td>Балочный</td>
+                <td>Великобритания</td>
+                <td>Лондон</td>
+                <td>2000</td>
+                <td>325</td>
+            </tr>
+            <tr>
+                <td>Тауэрский мост</td>
+                <td>Разводной</td>
+                <td>Великобритания</td>
+                <td>Лондон</td>
+                <td>1894</td>
+                <td>244</td>
+            </tr>
+            <tr>
+                <td>Мост Ватерлоо</td>
+                <td>Балочный</td>
+                <td>Великобритания</td>
+                <td>Лондон</td>
+                <td>1945</td>
+                <td>381</td>
+            </tr>
+            <tr>
+                <td>Мост Александра III</td>
+                <td>Арочный</td>
+                <td>Франция</td>
+                <td>Париж</td>
+                <td>1900</td>
+                <td>160</td>
+            </tr>
+            <tr>
+                <td>Мост Пон-Нёф</td>
+                <td>Арочный</td>
+                <td>Франция</td>
+                <td>Париж</td>
+                <td>1607</td>
+                <td>232</td>
+            </tr>
+            <tr>
+                <td>Мост Карла</td>
+                <td>Арочный</td>
+                <td>Чехия</td>
+                <td>Прага</td>
+                <td>1402</td>
+                <td>516</td>
+            </tr>
+            <tr>
+                <td>Цепной мост Сечени</td>
+                <td>Подвесной</td>
+                <td>Венгрия</td>
+                <td>Будапешт</td>
+                <td>1849</td>
+                <td>375</td>
+            </tr>
+            <tr>
+                <td>Мост Васко да Гама</td>
+                <td>Вантовый</td>
+                <td>Португалия</td>
+                <td>Лиссабон</td>
+                <td>1998</td>
+                <td>17000</td>
+            </tr>
+            <tr>
+                <td>Мост 25 апреля</td>
+                <td>Подвесной</td>
+                <td>Португалия</td>
+                <td>Лиссабон</td>
+                <td>1966</td>
+                <td>2277</td>
+            </tr>
+            <tr>
+                <td>Мост Инчхон</td>
+                <td>Вантовый</td>
+                <td>Южная Корея</td>
+                <td>Инчхон</td>
+                <td>2009</td>
+                <td>21200</td>
+            </tr>
+            <tr>
+                <td>Мост Банпо</td>
+                <td>Арочный</td>
+                <td>Южная Корея</td>
+                <td>Сеул</td>
+                <td>1982</td>
+                <td>1490</td>
+            </tr>
+            <tr>
+                <td>Мост Ханган</td>
+                <td>Балочный</td>
+                <td>Южная Корея</td>
+                <td>Сеул</td>
+                <td>1937</td>
+                <td>1225</td>
+            </tr>
+            <tr>
+                <td>Мост Махараджа</td>
+                <td>Арочный</td>
+                <td>Индия</td>
+                <td>Колката</td>
+                <td>1943</td>
+                <td>705</td>
+            </tr>
+            <tr>
+                <td>Мост Бандра — Ворли</td>
+                <td>Вантовый</td>
+                <td>Индия</td>
+                <td>Мумбаи</td>
+                <td>2009</td>
+                <td>5600</td>
+            </tr>
+            <tr>
+                <td>Мост Кинг-Фахд</td>
+                <td>Балочный</td>
+                <td>Саудовская Аравия — Бахрейн</td>
+                <td>Эль-Хубар — Манама</td>
+                <td>1986</td>
+                <td>25000</td>
+            </tr>
+            <tr>
+                <td>Мост через залив Сидней-Харбор</td>
+                <td>Арочный</td>
+                <td>Австралия</td>
+                <td>Сидней</td>
+                <td>1932</td>
+                <td>1149</td>
+            </tr>
+        </tbody>
+    </table>
 
-    </body>
+</body>
+
 </html>
