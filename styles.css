@@ -1,0 +1,174 @@
+#menu {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#menu ul {
+    display: inline-block;
+    /* необходимо, чтобы центрировать меню, в
+    противном случае UL тэг не будет реагировать на свойство text-align*/
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#menu li {
+    float: left;
+}
+
+#menu a {
+    display: block;
+    padding: 10px 20px;
+    color: #000000;
+    text-decoration: none;
+}
+
+#menu .active {
+    background: #3d87cc;
+    border-radius: 0px 16px 0px 16px;
+    color: white;
+}
+
+#header {
+    background: rgb(44, 157, 223);
+    padding: 10px 15px;
+    height: 20px;
+    color: white;
+    line-height: 20px;
+    margin-bottom: 5px;
+}
+
+.gallery {
+    width: 80%;
+    margin: 0 auto;
+    height: 350px;
+}
+
+.gallery img {
+    width: 100%;
+}
+
+.gallery-left {
+    width: 66%;
+    height: 100%;
+    float: left;
+}
+
+.gallery-right {
+    width: 33%;
+    height: 100%;
+    float: right;
+}
+
+.gallery-right img {
+    height: 49.5%;
+}
+
+.gallery-left img {
+    height: 100%;
+}
+
+.card-list {
+    width: 100%;
+    text-align: center;
+    margin: 15px 0;
+}
+
+.bridge-card {
+    width: 33%;
+    display: inline-block;
+}
+
+.bridge-card img {
+    border-radius: 100px;
+    width: 100px;
+    height: 100px;
+}
+
+.bridge-card h4 {
+    margin: 0;
+}
+
+.article-section {
+    margin: 0 10%;
+    overflow: hidden;
+}
+
+.article-section h4 {
+    margin: 0
+}
+
+.article-body {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0;
+}
+
+.article-body p {
+    margin: 0 0 5px 0;
+}
+
+.article {
+    background-color: rgb(159, 194, 204);
+    border-radius: 16px;
+    margin-bottom: 5px;
+    padding: 1% 1%;
+}
+
+.article-wide {
+    width: 70%;
+}
+
+.article-thin {
+    width: 40%;
+    text-align: center;
+}
+
+.article-wide h4,
+.article-wide img {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.article-wide img {
+    width: 30%;
+    border-radius: 50px;
+    height: 100%;
+    max-height: 190px;
+}
+
+.article-wide h4 {
+    width: 15%;
+    height: 100%;
+    text-align: center;
+}
+
+.article-wide .article-body {
+    width: 53%;
+}
+
+.article-thin img {
+    width: 100%;
+    height: 200px;
+    border-radius: 50px;
+}
+
+.article-thin p {
+    margin: 4px 0;
+}
+
+.article-button {
+    padding: 5px;
+    background-color: #3d87cc;
+    color: white;
+    border-radius: 10px;
+    width: fit-content
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
