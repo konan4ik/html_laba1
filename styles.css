@@ -1,12 +1,10 @@
 #menu {
-    text-align: center;
     margin-bottom: 10px;
+    background: #333333;
+    height: 40px;
 }
 
 #menu ul {
-    display: inline-block;
-    /* необходимо, чтобы центрировать меню, в
-    противном случае UL тэг не будет реагировать на свойство text-align*/
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -14,58 +12,50 @@
 
 #menu li {
     float: left;
+    border-right: 1px solid white;
 }
 
 #menu a {
     display: block;
-    padding: 10px 20px;
-    color: #000000;
+    padding: 0px 20px;
+    color: white;
     text-decoration: none;
+    line-height: 40px;
 }
 
 #menu .active {
-    background: #3d87cc;
-    border-radius: 0px 16px 0px 16px;
-    color: white;
+    background: #04AA6D;
 }
 
-#header {
-    background: rgb(44, 157, 223);
-    padding: 10px 15px;
-    height: 20px;
-    color: white;
-    line-height: 20px;
-    margin-bottom: 5px;
+#menu .search {
+    float: right;
+    padding: 10px 10px;
 }
 
 .gallery {
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
     height: 350px;
 }
 
 .gallery img {
-    width: 100%;
-}
-
-.gallery-left {
-    width: 66%;
-    height: 100%;
+    display: block;
     float: left;
 }
 
-.gallery-right {
-    width: 33%;
+.gallery .left-img {
+    width: 33.33%;
     height: 100%;
-    float: right;
 }
 
-.gallery-right img {
-    height: 49.5%;
+.gallery .wide-img {
+    width: 66.66%;
+    height: 33.33%;
 }
 
-.gallery-left img {
-    height: 100%;
+.gallery .thin-img {
+    width: 33.33%;
+    height: 33.33%;
 }
 
 .card-list {
@@ -75,7 +65,7 @@
 }
 
 .bridge-card {
-    width: 33%;
+    width: 16%;
     display: inline-block;
 }
 
@@ -109,8 +99,8 @@
 }
 
 .article {
-    background-color: rgb(159, 194, 204);
-    border-radius: 16px;
+    background-color: #FFE0B2;
+    border-radius: 32px;
     margin-bottom: 5px;
     padding: 1% 1%;
 }
